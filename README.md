@@ -48,7 +48,7 @@ Xamarin.Android provides open-source bindings of the Android SDK for use with
 
 Building Xamarin.Android requires:
 
-* [Mono 4.4 or later](#mono-sdk)
+* [Latest Mono](#mono-sdk)
 * [The Java Development Kit (JDK)](#jdk)
 * [Autotools (`autoconf`, `automake`, etc.)](#autotools)
 * [The Android SDK and NDK](#ndk)
@@ -70,10 +70,8 @@ to provide install instructions to obtain the missing dependency, e.g.:
 
 ## Mono MDK
 
-Mono 4.4 or later is required to build on [OS X][osx-mono] and Linux.
-
-(This is because the build system uses the [XmlPeek][xmlpeek] task, which
-was first added in Mono 4.4.)
+Latest Mono is required to build on [OS X][osx-mono] and Linux.
+The build will tell you if your version is outdated.
 
 [osx-mono]: http://www.mono-project.com/download/#download-mac
 [xmlpeek]: https://msdn.microsoft.com/en-us/library/ff598684.aspx
