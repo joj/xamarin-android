@@ -58,7 +58,7 @@
       <MinimumVersion>$(MonoRequiredMinimumVersion)</MinimumVersion>
       <DarwinMinimumVersion>$(MonoRequiredDarwinMinimumVersion)</DarwinMinimumVersion>
       <CurrentVersionCommand>$(MSBuildThisFileDirectory)..\scripts\mono-version</CurrentVersionCommand>
-      <DarwinMinimumUrl>https://bosstoragemirror.blob.core.windows.net/wrench/mono-2017-10/8a/8a2a0628624e9a7456b0ec1831dd68998750df62/$(_DarwinMonoFramework)</DarwinMinimumUrl>
+      <DarwinMinimumUrl>https://bosstoragemirror.azureedge.net/wrench/mono-2017-10/8a/8a2a0628624e9a7456b0ec1831dd68998750df62/$(_DarwinMonoFramework)</DarwinMinimumUrl>
       <DarwinInstall>installer -pkg "$(AndroidToolchainCacheDirectory)\$(_DarwinMonoFramework)" -target /</DarwinInstall>
     </RequiredProgram>
   </ItemGroup>
