@@ -986,7 +986,7 @@ namespace Lib1 {
 		[Test]
 		public void BuildAppWithManagedResourceParserAndLibraries ()
 		{
-			int maxBuildTimeMs = 8000;
+			int maxBuildTimeMs = 15000;
 			var path = Path.Combine ("temp", "BuildAppWithManagedResourceParserAndLibraries");
 			var theme = new AndroidItem.AndroidResource ("Resources\\values\\Theme.xml") {
 				TextContent = () => @"<?xml version=""1.0"" encoding=""utf-8""?>
@@ -1053,7 +1053,7 @@ namespace Lib1 {
 						"Target '_ManagedUpdateAndroidResgen' should not have run.");
 					appBuilder.Target = "Compile";
 					Assert.IsTrue (appBuilder.Build (appProj, parameters: new string [] { "DesignTimeBuild=true", "BuildingInsideVisualStudio=true" }), "App project should have built");
-					Assert.LessOrEqual (appBuilder.LastBuildTime.TotalMilliseconds, maxBuildTimeMs, "DesingTime build should be less than 5 seconds.");
+					Assert.LessOrEqual (appBuilder.LastBuildTime.TotalMilliseconds, maxBuildTimeMs, $"DesignTime build should be less than {maxBuildTimeMs/1000} seconds.");
 					Assert.IsFalse (appProj.CreateBuildOutput (appBuilder).IsTargetSkipped ("_ManagedUpdateAndroidResgen"),
 					"Target '_ManagedUpdateAndroidResgen' should have run.");
 					FileAssert.Exists (designerFile, $"'{designerFile}' should have been created.");

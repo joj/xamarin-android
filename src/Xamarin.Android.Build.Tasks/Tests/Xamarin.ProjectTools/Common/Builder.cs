@@ -204,7 +204,7 @@ namespace Xamarin.ProjectTools
 			psi.StandardErrorEncoding = Encoding.UTF8;
 			psi.StandardOutputEncoding = Encoding.UTF8;
 			var p = Process.Start (psi);
-			var ranToCompletion = p.WaitForExit ((int)new TimeSpan (0,10,0).TotalMilliseconds);
+			var ranToCompletion = p.WaitForExit ((int)new TimeSpan (0,15,0).TotalMilliseconds);
 			var result = ranToCompletion && p.ExitCode == 0;
 
 			LastBuildTime = DateTime.UtcNow - start;
